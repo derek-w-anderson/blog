@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns="http://java.sun.com/xml/ns/javaee"
+xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
+http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
+	<servlet>
+		<servlet-name>CreateBlog</servlet-name>
+		<servlet-class>com.appspot.blog.controllers.CreateBlog</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>CreateBlog</servlet-name>
+		<url-pattern>/create-blog</url-pattern>
+	</servlet-mapping>
+	<welcome-file-list>
+		<welcome-file>index.html</welcome-file>
+	</welcome-file-list>
+	
+	<filter>
+		<icon>
+			<small-icon>small.gif</small-icon>
+			<large-icon>large.gif</large-icon>
+		</icon>
+		<filter-name>Authentication</filter-name>
+		<filter-class>com.appspot.blog.filters.AuthenticationFilter</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>Authentication</filter-name>
+		<servlet-name>CreateBlog</servlet-name>
+		<servlet-name>CreatePost</servlet-name>
+		<dispatcher>REQUEST</dispatcher></filter-mapping>
+	<context-param>
+		<description>The default value for the &lt;title&gt; tag in JSPs.</description>
+		<param-name>baseTitle</param-name>
+		<param-value>Blog IBM</param-value>
+	</context-param>
+	
+	
+	<servlet>
+		<description></description>
+		<display-name></display-name>
+		<icon>
+			<small-icon></small-icon>
+			<large-icon></large-icon>
+		</icon>
+		<servlet-name>Welcome</servlet-name>
+		<servlet-class>com.appspot.blog.controllers.Welcome</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Welcome</servlet-name><url-pattern>/home</url-pattern>
+	</servlet-mapping>
+	
+	
+	<servlet>
+		<description></description>
+		<display-name></display-name>
+		<icon>
+			<small-icon></small-icon>
+			<large-icon></large-icon>
+		</icon>
+		<servlet-name>ServletDispatcher</servlet-name>
+		<servlet-class>com.appspot.blog.controllers.ServletDispatcher</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ServletDispatcher</servlet-name><url-pattern>/view</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<description></description>
+		<display-name></display-name>
+		<icon>
+			<small-icon></small-icon>
+			<large-icon></large-icon>
+		</icon>
+		<servlet-name>ViewBlog</servlet-name>
+		<servlet-class>com.appspot.blog.controllers.ViewBlog</servlet-class>
+	</servlet>
+	<servlet>
+		<description></description>
+		<display-name></display-name>
+		<icon>
+			<small-icon></small-icon>
+			<large-icon></large-icon>
+		</icon>
+		<servlet-name>CreatePost</servlet-name>
+		<servlet-class>com.appspot.blog.controllers.CreatePost</servlet-class>
+	</servlet></web-app>

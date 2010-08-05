@@ -1,0 +1,91 @@
+body {
+	font-family: arial, sans-serif;
+	font-size: 13px;
+	font-size-adjust: none;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: normal;
+	line-height: 1.35em;
+	text-align: center;
+}
+
+h2 {
+	padding-bottom: 5px;
+}
+
+td {
+	padding-right: 4px;
+}
+
+div#main {
+	position: absolute;
+	height: auto !important;
+	text-align: left;
+}
+
+div#header {
+	color: #ffffff;
+	background-color: #555555;
+	padding: 20px 10px 15px 15px;
+}
+
+div#content {
+	width: 65em;
+	margin: 0 0 0 16px;
+}
+
+div.column {
+	text-align: left;
+}
+
+div#leftColumn {
+	position: absolute;
+	width: 65%;
+}
+
+div#rightColumn {
+	float: right;
+	width: 30%;
+}
+
+div.blogSummary {
+	color: #777777;
+	font-size: 12px;
+	margin-bottom: 10px;
+}
+
+div.post {
+	padding: 0 0 10px 10px;
+}
+
+div.signature {
+	font-size: 70%;
+}
+
+a:link {
+	color: #005fbe;
+	font-weight : bold;
+	text-decoration: none;
+	font-weight: bold;
+}
+
+a:visited {
+	color: #005fbe;
+	font-size: 115%;
+	font-weight: none;
+	text-decoration: none;
+}
+
+a:hover,a:active {
+	text-decoration: underline;
+}
+
+a#headerLink {
+	color: white;
+	font-size: 28px;
+	font-weight: bold;
+}
+
+a#headerLink :hover {
+	text-decoration: none;
+}
